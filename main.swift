@@ -70,7 +70,10 @@ extension LinkedList: CustomStringConvertible {
 }
 
 let aList = LinkedList()
-// this length of the List (47638) will cause the program terminated unexpectedly when removing all elements in it on my Computer
+/**
+    This length of the List (47638) will cause the program terminated unexpectedly when removing all elements in it on my MacBook Pro if you compile the file without using `-O`.
+    However, if you use `-O` to compile the file, the number just go larger, and still, it will raise a segment fault when removing all elements
+*/
 for i in 1..<47638 {
   aList.append("\(i)")
 }
